@@ -371,6 +371,7 @@ function highlightValues(string, ...values){
         }
         str += string.raw[i];
     }
+    let stringasd = "asd";
     return str;
 }
 
