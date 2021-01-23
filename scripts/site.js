@@ -356,10 +356,22 @@ function generateRickProfile(la) {
         riskProfile = "high";
     }
 
-    var summaryText = "Dear " + la.ApplicantName + ", " + reviewText + " Your risk profile is " + riskProfile;
+    var summaryText = `Dear  ${la.ApplicantName}, 
+    reviewText.  
+    Your risk profile is  ${riskProfile}`;
 
     return summaryText;
 }
 
+function highlightValues(string, ...values){
+    let result = "";
+    for (let i=0; i<string.raw.length; i++){
+        if (i > 0){ // stringow wiecej o 1 niz values
+            str += `<b>${values[i-1]}</b>`
+        }
+        str += string.raw[i];
+    }
+    return str;
+}
 
 
